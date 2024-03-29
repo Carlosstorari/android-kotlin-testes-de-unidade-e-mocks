@@ -20,7 +20,7 @@ data class Produto(
 ) : Parcelable {
 
         @Ignore
-        val valorValido = !valorMenorOuIgualAZero() && !valorMaiorQueCem()
+        val valorEhValido = !valorMenorOuIgualAZero() && !valorMaiorQueCem()
 
         private fun valorMenorOuIgualAZero(): Boolean {
                 return valor <= BigDecimal.ZERO
